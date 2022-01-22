@@ -1,0 +1,30 @@
+.borderForm {
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  border-bottom: 2px #afafaf solid !important;
+
+}
+
+.cards {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 450px;
+  height: 180px;
+  border: 1px #d3d3d3 solid !important;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 0 20px 20px 0;
+
+}
+
+
+.button-style {
+  width: 180px;
+  margin-left: 12px;
+}

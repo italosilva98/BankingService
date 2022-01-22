@@ -1,0 +1,64 @@
+<h2>Dados pessoais</h2>
+<a
+  href="#"
+  (click)="editar()"
+  style="float: right"
+  *ngIf="readOnlyForm === true"
+  >editar dados pessoais</a
+>
+<div *ngIf="readOnlyForm === false">
+  <div class="row" style="margin-top: 30px">
+    <button type="button" class="btn btn-primary" style="width: 180px; margin-right: 20px;">salvar alterações</button>
+    <button type="button" class="btn btn-secondary" style="width: 180px;" (click)="cancelar()">cancelar alteracoes</button>
+  </div>
+</div>
+
+<br />
+<br />
+
+<form [formGroup]="dadosPessoais">
+  <div class="row">
+    <div class="col">
+      <mat-form-field appearance="legacy">
+        <mat-label>nome</mat-label>
+        <input matInput formControlName="nome" [readonly]="readOnlyForm" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>rg</mat-label>
+        <input matInput formControlName="rg" [readonly]="readOnlyForm" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>pai</mat-label>
+        <input matInput formControlName="pai" [readonly]="readOnlyForm" />
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field appearance="legacy">
+        <mat-label>cpf</mat-label>
+        <input matInput formControlName="cpf" [readonly]="readOnlyForm" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>sexo</mat-label>
+        <input matInput formControlName="sexo" [readonly]="readOnlyForm" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>mae</mat-label>
+        <input matInput formControlName="mae" [readonly]="readOnlyForm" />
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field appearance="legacy">
+        <mat-label>nascimento</mat-label>
+        <input
+          matInput
+          formControlName="nascimento"
+          [readonly]="readOnlyForm"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>profissão</mat-label>
+        <input matInput formControlName="profissao" [readonly]="readOnlyForm" />
+      </mat-form-field>
+    </div>
+  </div>
+</form>

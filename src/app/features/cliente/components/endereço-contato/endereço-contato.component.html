@@ -1,0 +1,86 @@
+<h2>Endereço / Contato</h2>
+<a
+  href="#"
+  (click)="editar()"
+  style="float: right"
+  *ngIf="readOnlyForm === true"
+  >editar endereço / contato</a
+>
+<div *ngIf="readOnlyForm === false">
+  <div class="row" style="margin-top: 30px">
+    <button
+      type="button"
+      class="btn btn-primary"
+      style="width: 180px; margin-right: 20px"
+    >
+      salvar alterações
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      style="width: 180px"
+      (click)="cancelar()"
+    >
+      cancelar alteracoes
+    </button>
+  </div>
+</div>
+
+<br />
+
+<form [formGroup]="enderecoContato">
+  <div class="row">
+    <mat-form-field appearance="legacy">
+      <mat-label>logradouro</mat-label>
+      <input matInput formControlName="logradouro" [readonly]="readOnlyForm" />
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <div class="col">
+      <mat-form-field appearance="legacy">
+        <mat-label>numero</mat-label>
+        <input matInput formControlName="numero" [readonly]="readOnlyForm" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>cep</mat-label>
+        <input matInput formControlName="cep" [readonly]="readOnlyForm" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>email</mat-label>
+        <input matInput formControlName="email" [readonly]="readOnlyForm" />
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field appearance="legacy">
+        <mat-label>complemento</mat-label>
+        <input
+          matInput
+          formControlName="complemento"
+          [readonly]="readOnlyForm"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>cidade</mat-label>
+        <input matInput formControlName="cidade" [readonly]="readOnlyForm" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>telefone</mat-label>
+        <input matInput formControlName="telefone" [readonly]="readOnlyForm" />
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field appearance="legacy">
+        <mat-label>bairro</mat-label>
+        <input matInput formControlName="bairro" [readonly]="readOnlyForm" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>estado</mat-label>
+        <input matInput formControlName="estado" [readonly]="readOnlyForm" />
+      </mat-form-field>
+      <mat-form-field appearance="legacy">
+        <mat-label>celular</mat-label>
+        <input matInput formControlName="celular" [readonly]="readOnlyForm" />
+      </mat-form-field>
+    </div>
+  </div>
+</form>

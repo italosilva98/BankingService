@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>Identificação de cliente</h2>
+  <br />
+  <p>Selecione a forma de pesquisa:</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field appearance="legacy" style="margin-right: 20px">
+            <mat-label>agência</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field appearance="legacy">
+            <mat-label>conta</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary button-style" (click)="buscar()">
+        pesquisar
+      </button>
+    </div>
+
+
+    <div class="card">
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field appearance="legacy">
+            <mat-label>CNPJ/CPF</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary button-style">
+        pesquisar
+      </button>
+    </div>
+  </div>
+</div>

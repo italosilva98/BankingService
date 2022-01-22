@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Identificação de cliente</h2>
+  <p>Selecione a conta para atendimento</p>
+
+  <div class="cards">
+    <div class="card" *ngFor="let conta of contas">
+      <div class="col">
+        <div class="row">
+          <h2>{{ conta.nome }}</h2>
+        </div>
+        <div class="row">
+          <p>{{ conta.agencia }} | {{ conta.conta }}</p>
+        </div>
+        <div class="row">
+          <p>{{ conta.tipoConta }}</p>
+        </div>
+        <div class="row">
+          <button type="button" class="btn btn-primary button-style" (click)="buscar()">
+            iniciar atendimento
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
